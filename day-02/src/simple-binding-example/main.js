@@ -2,7 +2,7 @@ new Vue({
   el: '#app',
   data: {
     greeting: 'Hello World!',
-    user: 'Hassan Djirdeh',
-    city: 'Toronto'
+    user: 'Isale Bryan',
+    city: 'Nakuru, Kenya'
   }
 });
