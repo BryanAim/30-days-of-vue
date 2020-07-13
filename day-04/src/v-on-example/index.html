@@ -1,24 +1,27 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>V-on directive</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div id="app">
+    <h2>{{ greeting }}</h2>
+    <p>{{ alertMessage }}</p>
+    <button v-on:click='changeGreeting'>Change Greeting</button>
+    <button v-on:dblclick="changeGreeting"> Double click to change greeting</button>
 
-  <body>
-    <div id="app">
-      <h2>{{ greeting }}</h2>
-      <p>{{alertMessage}}</p>
-      <button v-on:click="changeGreeting">
-        Change Greeting
-      </button> 
-      <button v-on:dblclick="changeGreeting">
-        Double click to change greeting
-      </button>
-      <input v-on:keyup="alertMessageGreeting"
-             placeholder="Type something" />
-      <input v-on:keyup.enter="alertEnterGreeting" 
-             placeholder="Type and release Enter" />
-    </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="./main.js"></script>
-  </body>
+    <input v-on:keyup="alertMessageGreeting" type="text" placeholder="Type Something">
+
+    <input v-on:keyup.enter="alertEnterGreeting" type="text" placeholder="Type and release to enter">
+
+  </div>
+
+  <script src="../../../vue-library//vue.js"></script>
+
+  <script src="./main.js"></script>
+  
+</body>
 </html>

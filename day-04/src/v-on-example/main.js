@@ -13,8 +13,8 @@ new Vue({
     alertMessageGreeting() {
       this.alertMessage = 'You typed something!';
     },
-    alertEnterGreeting() {
-      this.alertMessage = 'You typed and pressed Enter!';
-    },
-  }
-});
+    alertEnterGreeting () {
+      this.alertMessage='You typed and pressed Enter!';
+    }
+  },
+})
