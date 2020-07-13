@@ -7,19 +7,19 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
+  <!-- The v-if directive does not render the element only until the stated condition is true. The v-show directive, on the other hand, always renders the element but controls the CSS display property depending on whether the stated condition is true. -->
   <div id="app">
     <h2> {{ greeting }} </h2>
-    <p v-if="city=== 'Toronto'" >
+    <p v-show="city=== 'Toronto'" >
       by {{ user }} who lives in {{ city }}
     </p>
-    <p v-if="city==='Lagos'">
+    <p v-show="city==='Lagos'">
       by {{ user }} who wishes to visit {{ city }}
     </p>
 
-    <img v-bind:src="cityImage"/>
+    <img :src="cityImage"/>
 
-    <button v-on:click="changeCity">Change City</button>
+    <button @click="changeCity">Change City</button>
 
   </div>
   <script src="../../../vue-library//vue.js"></script>
