@@ -10,8 +10,22 @@
 <body>
   <div id="app">
     <ul>
-      <li v-for="number in numbers" > {{ number }}</li>
+      <li v-for="number in numbers" >
+        <p>{{ number }}</p>
+        <input type="text" placeholder="type sum'n">
+      </li>
     </ul>
+    <button @click="shuffle">
+      Shuffle!
+    </button>
   </div>
+
+  <script src="../../../vue-library//vue.js"></script>
+
+  <script
+src="https://cdn.jsdelivr.net/npm/lodash/lodash.js">
+</script>
+
+  <script src="./main.js"></script>
 </body>
 </html>
