@@ -9,11 +9,14 @@
 <body>
   <div id="app">
     <ul>
-      <li v-for="(number, index) in numbers" :key="index">
-        <p>{{ number }}</p>
+      <li v-for="number in numbers" :key="number.id">
+        <p>{{ number.value }}</p>
         <input type="text" placeholder="Type something">
       </li>
     </ul>
+    <button @click="shuffle">
+      Shuffle!
+    </button>
   </div>
 
   <script src="../../../vue-library//vue.js"></script>
