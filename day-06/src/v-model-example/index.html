@@ -1,65 +1,59 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet"
+      href="https://unpkg.com/bulma@0.7.4/css/bulma.css" />
+  <title>v-model</title>
+</head>
+<body>
+  <div id="app">
+    <div class="field">
+      <label class="label">Name</label>
+      <input v-model="name" class="input" placeholder="Your name please" type="text" />
+    </div>
 
-  <body>
-    <div id="app">
-      <div class="field">
-        <label class="label">Name</label>
-        <input v-model="name"
-          class="input"
-          type="text"
-          placeholder="Text input" />
-      </div>
-
-      <div class="field">
-        <label class="label">Subject</label>
-        <div class="select">
-          <select v-model="subject">
-            <option disabled value="">
-              Select dropdown
-            </option>
-            <option>Engineering</option>
-            <option>Computer Science</option>
-            <option>Biology</option>
-            <option>Other...</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="field">
-        <label class="checkbox">
-          <input v-model="termsAndConditions"
-            type="checkbox" />
-          I agree to the terms and conditions
-        </label>
-      </div>
-
-      <div class="field">
-        <label class="radio">
-          <input v-model="yesOrNo"
-            type="radio"
-            value="Yes" />
-          Yes
-        </label>
-        <label class="radio"> 
-          <input v-model="yesOrNo"
-            type="radio"
-            value="No" />
-          No
-        </label>
-      </div>
-
-      <div class="field">
-        <button class="button is-info" @click="submit">
-          Submit
-        </button>
+    <div class="field">
+      <label class="label">Subject</label>
+      <div class="select">
+        <select v-model="subject" type="text">
+          <option disabled value="">Select dropdown</option>
+          <option>Engineering</option>
+          <option>Computer Science</option>
+          <option>Biology</option>
+          <option>Other...</option>
+        </select>
       </div>
     </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="./main.js"></script>
-  </body>
+
+    <div class="field">
+      <label class="checkbox">
+        <input v-model="termsAndConditions" type="checkbox" />
+        I agree to the terms and conditions</label>
+    </div>
+
+    <div class="field">
+      <label class="radio">
+        <input v-model="yesOrNo" type="radio" value="Yes" />
+        Yes
+      </label>
+      <label class="radio">
+        <input v-model="yesOrNo" type="radio" value="No" />
+        No
+      </label>
+    </div>
+
+    <div class="field">
+      <button class="button is-info" @click="submit">
+        Submit
+      </button>
+    </div>
+
+  </div>
+
+  <script src="../../../vue-library//vue.js"></script>
+  <script src="./main.js"></script>
+</body>
 </html>
