@@ -1,11 +1,11 @@
 new Vue({
-  el: '#app',
+  el:'#app',
   data: {
-    message: 'Greetings!',
+    message: "Greetings!"
   },
   methods: {
     reverseString(string) {
       return string.split('').reverse().join('');
-    },
-  }
-});
+    }
+  },
+})
