@@ -1,11 +1,11 @@
 new Vue({
   el: '#app',
   data: {
-    message: 'Greetings!',
+    message: 'Greetings!'
   },
   computed: {
     reverseMessage() {
-      return this.message.split('').reverse().join('');
-    },
-  }
-});
+      return this.message.split('').reverse().join('')
+    }
+  },
+})
