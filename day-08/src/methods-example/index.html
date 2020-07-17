@@ -1,25 +1,30 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma@0.7.4/css/bulma.css">
+  <title>Methods example</title>
+</head>
+<body>
+  <div id="app">
+    <div class="card">
+      <header class="card-header card-header-title">
+        <span>Original:</span>
+        {{ message }}
+      </header>
 
-  <body>
-    <div id="app">
-      <div class="card">
-        <header class="card-header card-header-title">
-          <span>Original:</span>
-          {{ message }}
-        </header>
-        
-        <header class="card-header card-header-title">
-          <span>Reversed:</span>
-          {{ reverseString(message) }}
-        </header>
-      </div>
+      <header class="card-header card-header-title">
+        <span>Reversed:</span>
+        {{ reverseString(message) }}
+      </header>
     </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="./main.js"></script>
-  </body>
+
+  </div>
+
+  
+  <script src="../../../vue-library//vue.js"></script>
+  <script src="./main.js"></script>
+</body>
 </html>
