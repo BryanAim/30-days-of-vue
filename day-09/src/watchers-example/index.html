@@ -1,29 +1,29 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css" />
-  </head>
-
-  <body>
-    <div id="app">
-      <div class="field">
-        <label class="label">KM</label>
-        <input v-model="km"
-                class="input"
-                type="number"
-                placeholder="Type a length in KM!">
-      </div>
-      
-      <div class="field">
-        <label class="label">M</label>
-        <input v-model="m"
-                class="input"
-                type="number"
-                placeholder="Type a length in M!">
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet"
+  href="https://unpkg.com/bulma/css/bulma.css" />
+  <title>Watchers</title>
+</head>
+<body>
+  <div id="app">
+    <div class="field">
+      <label for="km" class="label">KM</label>
+      <input v-model="km"
+       type="number"
+      class="input"
+      placeholder="Type a length in KM!">
     </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script src="./main.js"></script>
-  </body>
+
+    <div class="field">
+      <label for="m" class="label">M</label>
+      <input v-model="m" type="number"
+      class="input"
+      placeholder="Type a length in M" />
+    </div>
+  </div>
+</body>
 </html>
