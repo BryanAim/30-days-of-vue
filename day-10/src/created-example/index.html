@@ -1,35 +1,37 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="./styles.css" />
-    <link rel="stylesheet"
-      href="https://unpkg.com/bulma/css/bulma.css" />
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/bulma/css/bulma.css">
 
-  <body>
-    <div id="app">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            {{name}}
-          </p>
-        </header>
-        <div class="card-content">
-          <div class="content">
-            <p>{{company.name}}</p>
-            <p>"{{company.catchPhrase}}"</p>
-          </div>
+  <title>created() lifecycle hook</title>
+</head>
+<body>
+  <div id="app">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">{{ name }}</p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+          <p>{{ company.name }}</p>
+          <p>{{ company.catchPhrase }}</p>
         </div>
-        <footer class="card-footer">
-          <a href="#" class="card-footer-item">
-            {{email}}
-          </a>
-        </footer>
       </div>
+      <footer class="card-footer">
+        <a href="#" class="card-footer-item">
+          {{ email }}
+        </a>
+      </footer>
     </div>
-    <script src="https://unpkg.com/vue"></script>
-    <script 
-      src="https://unpkg.com/axios/dist/axios.min.js">
-    </script>
-    <script src="./main.js"></script>
-  </body>
+  </div>
+
+  <script src="../../../vue-library/vue.js"></script>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+  <script src="./main.js"></script>
+</body>
 </html>
