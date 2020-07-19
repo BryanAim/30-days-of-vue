@@ -1,11 +1,11 @@
 new Vue({
   el: '#app',
   data: {
-    name: '',
-    email: '',
+    name: 'Loading...',
+    email: 'Loading...',
     company: {
-      name: '',
-      catchPhrase: ''
+      name: 'Loading...',
+      catchPhrase: 'Loading...'
     }
   },
   created() {
