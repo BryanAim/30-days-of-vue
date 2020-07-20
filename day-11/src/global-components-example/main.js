@@ -36,7 +36,7 @@ Vue.component('tweet-component', {
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
-            <img scr="./images/james.png">
+            <img src="./images/james.png" >
           </figure>
         </div>
         <div class="media-content">
