@@ -16,21 +16,22 @@
 </head>
 <body>
   <div id="app">
-    <div class="tweet">
+    <div class="tweet"
+    v-for="tweet in tweets" :key="tweet.id">
       <div class="box">
         <article class="media">
           <div class="media-left">
             <figure class="image is-64x64">
-              <img :src="tweets[0].img" alt="img">
+              <img :src="tweet.img" alt="img">
             </figure>
           </div>
           <div class="media-content">
             <div class="content">
               <p>
-                <strong>{{ tweets[0].name }}</strong>
-                <small>{{ tweets[0].handle}}</small>
+                <strong>{{ tweet.name }}</strong>
+                <small>{{ tweet.handle}}</small>
                 <br>
-                {{ tweets[0].tweet}}
+                {{ tweet.tweet}}
               </p>
             </div>
             <div class="level-left">
@@ -39,7 +40,7 @@
                   <i class="fas fa-heart"></i>
                 </span>
                 <span class="likes">
-                  {{ tweets[0].likes}}
+                  {{ tweet.likes}}
                 </span>
               </a>
             </div>
