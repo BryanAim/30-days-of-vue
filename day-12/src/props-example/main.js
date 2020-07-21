@@ -36,16 +36,16 @@ Vue.component('tweet-component', {
       <article class="media">
         <div class="media-left">
           <figure class="image is-64x64">
-            <img src="./images/james.png" >
+            <img :src="tweet.img" >
           </figure>
         </div>
         <div class="media-content">
             <div class="content">
               <p>
-                <strong>Isale</strong>
-                <small>@isalebryan</small>
+                <strong>{{ tweet.name}}</strong>
+                <small>{{ tweet.email }}</small>
                 <br>
-                If you don't succeed, dust yourself off...
+                {{ tweet.tweet}}
               </p>
             </div>
             <div class="level-left">
@@ -54,7 +54,7 @@ Vue.component('tweet-component', {
                   <i class="fas fa-heart"></i>
                 </span>
                 <span class="likes">
-                  10
+                  {{ tweet.likes }}
                 </span>
               </a>
             </div>
@@ -68,7 +68,8 @@ Vue.component('tweet-component', {
           <i class="fas fa-envelope"></i>
         </span>
       </div>
-  </div>`
+  </div>`,
+  props: ['tweet']
 })
 
 new Vue({
