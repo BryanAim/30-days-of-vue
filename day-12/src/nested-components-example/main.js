@@ -28,6 +28,30 @@ const tweets = [
 
 
 // The Vue.component() constructor registers a component globally in an application.
+Vue.component('tweet-content', {
+  template: `
+    <div class="media-content">
+      <div class="content">
+        <p>
+          <strong> {{ tweet.name }}</strong>
+          <small> {{ tweet.handle }}</small>
+          <br>
+          {{ tweet.tweet}}
+        </p>
+      </div>
+      <div class="level-left">
+        <a class="level-item">
+          <span class="icon is-small">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span class="likes"> {{ tweet.likes }}</span>
+        </a>
+      </div>  
+    </div>
+  `,
+  props: ['tweet']
+});
+
 Vue.component('tweet-component', {
   //options
   template:`
@@ -39,26 +63,7 @@ Vue.component('tweet-component', {
             <img :src="tweet.img" >
           </figure>
         </div>
-        <div class="media-content">
-            <div class="content">
-              <p>
-                <strong>{{ tweet.name}}</strong>
-                <small>{{ tweet.email }}</small>
-                <br>
-                {{ tweet.tweet}}
-              </p>
-            </div>
-            <div class="level-left">
-              <a class="level-item">
-                <span class="icon is-small">
-                  <i class="fas fa-heart"></i>
-                </span>
-                <span class="likes">
-                  {{ tweet.likes }}
-                </span>
-              </a>
-            </div>
-          </div>
+        <tweet-content :tweet="tweet"></tweet-content>
       </article>
     </div>
     <div class="control has-icons-left">
