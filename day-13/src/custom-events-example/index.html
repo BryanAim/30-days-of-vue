@@ -19,7 +19,8 @@
   <div id="app">
     <tweet-component
     v-for="tweet in tweets" :key="tweet.id"
-    :tweet="tweet"></tweet-component>
+    :tweet="tweet"
+    @add="addTweetMessage($event)"></tweet-component>
   </div>
   
 

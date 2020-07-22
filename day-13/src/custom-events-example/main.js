@@ -46,6 +46,12 @@ Vue.component('tweet-content', {
           </span>
           <span class="likes"> {{ tweet.likes }}</span>
         </a>
+
+        <a class="level-item" @click="$emit('add', tweet)">
+          <span class="icon is-small">
+            <i class="fas fa-plus"></i>
+          </span>
+        </a>
       </div>  
     </div>
   `,
@@ -63,7 +69,8 @@ Vue.component('tweet-component', {
             <img :src="tweet.img" >
           </figure>
         </div>
-        <tweet-content :tweet="tweet"></tweet-content>
+        <tweet-content :tweet="tweet"
+        @add="$emit('add', $event)"></tweet-content>
       </article>
     </div>
     <div class="control has-icons-left">
@@ -86,5 +93,19 @@ new Vue({
   el:'#app',
   data: {
     tweets
-  }
+  },
+  methods: {
+    addTweetMessage(tweet) {
+      let newTweet = {};
+      let lastTweetObjectID = this.tweets[this.tweets.length - 1].id;
+
+      //shallow copy tweet object
+      newTweet = Object.assign({}, tweet);
+
+      // set tweet id to be one greater than last tweet
+      newTweet.id = lastTweetObjectID + 1;
+
+      this.tweets.push(newTweet);
+    }
+  },
 });
