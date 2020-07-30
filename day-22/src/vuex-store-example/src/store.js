@@ -1,11 +1,11 @@
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
 Vue.use(Vuex);
 
 const state = {
   numbers: [1, 2, 3]
-};
+}
 
 const mutations = {
   ADD_NUMBER(state, payload) {
@@ -15,7 +15,7 @@ const mutations = {
 
 const actions = {
   addNumber(context, number) {
-    context.commit("ADD_NUMBER", number);
+    context.commit('ADD_NUMBER', number);
   }
 };
 
@@ -27,7 +27,7 @@ const getters = {
 
 export default new Vuex.Store({
   state,
-  mutations,
-  actions,
+  mutations, 
+  actions, 
   getters
 });
